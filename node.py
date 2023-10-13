@@ -5,10 +5,18 @@ import json
 import pprint
 
 class node(ABC):
-    def __init__(self,addr) -> None:
+    def __init__(self,addr=None) -> None:
         super().__init__()
-        self._addr = 'none'
-        self.load(addr)
+        self._addr = None
+        self.img = None
+        self.name = None
+        self.crop = None
+        self.text = None
+        self.static_args = []
+        self.pixel = None
+        if addr is not  None:
+            self.load(addr)
+        
     def load(self,addr:str):
         self._addr = addr
         path = os.path.join(*self._addr)
@@ -49,5 +57,7 @@ class node(ABC):
 if __name__ == "__main__":
 
     n = node(['metadata','1.json'])    
+    n2 = node()
+    print (n2)
     logging.info('application run ...')
     print (n)
