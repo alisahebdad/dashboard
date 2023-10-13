@@ -27,6 +27,10 @@ class node(ABC):
             }
         else:
             self.pixel = None
+        if 'imgProcessingMethod' in self._json:
+            self.imgProcessingMethod = self._json['imgProcessingMethod']
+        else:
+            self.imgProcessingMethod = None
 
     def __repr__(self) -> str:
         payload = {
