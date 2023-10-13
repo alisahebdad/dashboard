@@ -1,0 +1,11 @@
+{
+    "name":"first",
+    "img":"1.png",
+    "crop":[100,200,300,400],
+    "text":"none",
+    "static_args":[1,2,3,4],
+    "pixel":{
+        "addr":[1000,1002],
+        "color":[100,12,123]
+    }
+}
